@@ -1,0 +1,11 @@
+
+.container{
+    margin-top: 20px;
+    margin: auto;
+    width: 50% !important;
+    border: 1px gray solid;
+}
+.error{
+    color: red;
+    font-size: 80%;
+}

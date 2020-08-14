@@ -1,0 +1,72 @@
+extends layout
+block content
+    .container
+        .row
+            .col-12.text-center
+                h4 Ministry Of Health
+                h2 COVID-19 (CORONA VIRUS)
+                p Virus - Test Registration Form
+
+            .col-12
+                form(action="/", method="post" id="registerForm")
+                    .form-row
+                        .col.form-group
+                            label Surname
+                            input.form-control.rounded-0(name="surname" type="text" id="surname")
+                            #surnameError.error
+                        .col.form-group
+                            label Given name
+                            input.form-control.rounded-0(name="givenname" type="text" id="givenname")
+                            #givennameError.error
+                    .form-row
+                        .col.form-group
+                            label Date of Birth
+                            input.form-control.rounded-0(name="dob" type="date" id="dob")
+                            #dobError.error
+                        .col.form-group
+                            label Place of residence
+                            input.form-control.rounded-0(name="residence" type="text" id="residence")
+                            #residenceError.error
+
+                    .form-row
+                        .col.form-group
+                            label Occupation
+                            input.form-control.rounded-0(name="occupation" type="text" id="occupation")
+                            #occupationError.error
+                        .col.form-group
+                            label Nationality
+                            input.form-control.rounded-0(name="nationality" type="text" id="nationality")
+                            #nationalityError.error
+                    .form-row
+                        .col.form-group
+                            label.form-check.form-check-inline                   
+                                input.form-check-input(type="radio" name="gender" id="gender" value="male" checked)
+                                span.form-check-label Male 
+                        .col.form-group
+                            label.form-check.form-check-inline
+                                input.form-check-input(type="radio" name="gender" id="gender" value="female")
+                                span.form-check-label Female
+                        #genderError.error
+                    .form-row
+                        .col.form-group
+                            label Category
+                            select.form-control(name="category" id="category")
+                                option(value="zero") Select Category
+                                option(value="Returnee") Returnee
+                                option(value="Contact") Contact
+                                option(value="Alert") Alert
+                                option(value="Volunteer") Volunteer
+                            #categoryError.error
+
+
+                    .form-row
+                        .col.form-group
+                            button.btn.btn-primary.pull-right Register
+                
+                
+                
+                
+                
+                
+                
+                
